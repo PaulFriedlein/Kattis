@@ -1,7 +1,7 @@
 // Kattis problem
 // Name: Unlock Pattern
 // Difficulty: 1.6
-// Status: Unsolved
+// Status: Solved
 import java.util.Scanner;
 
 public class unlockPattern {
@@ -81,7 +81,7 @@ public class unlockPattern {
         else {
                 return Math.sqrt(5);
         }
-        
+
     }//distance
     //--------------------------------------------------------------------------------
     
