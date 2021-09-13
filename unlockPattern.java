@@ -2,6 +2,7 @@
 // Name: Unlock Pattern
 // Difficulty: 1.6
 // Status: Solved
+
 import java.util.Scanner;
 
 public class unlockPattern {
@@ -50,39 +51,13 @@ public class unlockPattern {
                 }
             }
         }
+        // returns -1 for row and col if value is not found
         return new int[] {-1, -1};
-
     }//findPosition
     //--------------------------------------------------------------------------------
-    public static double distance(int[] current, int[] next) {
-        
-        int rowsMoved = (int)Math.abs(current[0] - next[0]);
-        int colsMoved = (int)Math.abs(current[1] - next[1]);
-        int cartDistanceMoved = rowsMoved + colsMoved;
-
-        /* This indicates that the row value hasn't changed 
-        from the current position to the next one. */
-        if (current[0] == next[0]) {
-            return colsMoved;
-        }
-        /* This indicates that the column value hasn't changed 
-        from the current position to the next one. */
-        else if (current[1] == next[1]) {
-            return rowsMoved;
-        }
-        /* If the following statements are reached, that means both the row and 
-        column values have changed, which indicates a diagonal movement */
-        else if (cartDistanceMoved == 2) {
-                return Math.sqrt(2);
-        }
-        else if (cartDistanceMoved == 4) {
-                return Math.sqrt(2) * 2;
-        }
-        else {
-                return Math.sqrt(5);
-        }
-
+    public static double distance(int[] current, int[] next) { 
+        // Returns the distance between two points (Distance formula)
+        return Math.sqrt(Math.pow((current[0]-next[0]),2)+Math.pow(current[1]-next[1],2));
     }//distance
     //--------------------------------------------------------------------------------
-    
 }
